@@ -1,0 +1,20 @@
+{
+	"name": "com.lexderi.lulib",
+	"version": "1.0.0",
+	"displayName": "LuLib",
+	"description": "Utility library for Unity",
+	"unity": "2021.3",
+	"unityRelease": "26f1",
+	"changelogUrl": "https://example.com/changelog.html",
+	"licensesUrl": "https://example.com/licensing.html",
+	"keywords": [
+		"utility",
+		"unity",
+		"library"
+	],
+	"author": {
+		"name": "Lexderi",
+		"email": "lexderi@rummert.de",
+		"url": "https://github.com/Lexderi"
+	}
+}
