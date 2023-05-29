@@ -92,13 +92,13 @@ namespace LuLib.Vector
 
         #region Magnitude
         /// <summary>
-        /// Limits the length of the vector to the maximum length
+        /// Limits the magnitude of the vector to the maximum magnitude
         /// </summary>
         /// <param name="v">vector</param>
-        /// <param name="maxLength">maximum length</param>
-        public static void Limit(this ref Vector2 v, float maxLength)
+        /// <param name="maxLength">maximum magnitude</param>
+        public static void Limit(this ref Vector2 v, float maxMag)
         {
-            if (v.magnitude > maxLength) v.SetMagnitude(maxLength);
+            if (v.magnitude > maxMag) v.SetMagnitude(maxMag);
         }
         /// <summary>
         /// Sets the magnitude of the vector
@@ -266,13 +266,13 @@ namespace LuLib.Vector
 
         #region Magnitude
         /// <summary>
-        /// Limits the length of the vector to the maximum length
+        /// Limits the magnitude of the vector to the maximum magnitude
         /// </summary>
         /// <param name="v">vector</param>
-        /// <param name="maxLength">maximum length</param>
-        public static void Limit(this ref Vector3 v, float maxLength)
+        /// <param name="maxLength">maximum magnitude</param>
+        public static void Limit(this ref Vector3 v, float maxMag)
         {
-            if (v.magnitude > maxLength) v.SetMagnitude(maxLength);
+            if (v.magnitude > maxMag) v.SetMagnitude(maxMag);
         }
         /// <summary>
         /// Sets the magnitude of the vector
