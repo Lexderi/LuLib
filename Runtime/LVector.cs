@@ -229,7 +229,7 @@ namespace LuLib.Vector
         /// </summary>
         /// <param name="v">vector</param>
         /// <param name="rotation">rotation in euler degrees</param>
-        public static void Rotate(this ref v, Vector3 rotation) 
+        public static void Rotate(this ref Vector3 v, Vector3 rotation) 
         {
             v.Rotate(rotation.x, rotation.y, rotation.z);
         }
