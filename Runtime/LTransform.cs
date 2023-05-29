@@ -41,5 +41,41 @@ namespace LuLib.Transform
             t.position = pos;
         }
         #endregion // Set Position
+            
+        #region Set Angle
+        /// <summary>
+        /// sets the x component of the euler angles
+        /// </summary>
+        /// <param name="t">transform</param>
+        /// <param name="x">new x</param>
+        public static void SetAngleX(this UnityEngine.Transform t, float x)
+        {
+            Vector3 eulerAngles = t.eulerAngles;
+            eulerAngles.x = x;
+            t.eulerAngles = eulerAngles;
+        }
+        /// <summary>
+        /// sets the y component of the euler angles
+        /// </summary>
+        /// <param name="t">transform</param>
+        /// <param name="y">new y</param>
+        public static void SetAngleY(this UnityEngine.Transform t, float y)
+        {
+            Vector3 eulerAngles = t.eulerAngles;
+            eulerAngles.y = y;
+            t.eulerAngles = eulerAngles;
+        }
+        /// <summary>
+        /// sets the z component of the euler angles
+        /// </summary>
+        /// <param name="t">transform</param>
+        /// <param name="z">new z</param>
+        public static void SetAngleZ(this UnityEngine.Transform t, float z)
+        {
+            Vector3 eulerAngles = t.eulerAngles;
+            eulerAngles.z = z;
+            t.eulerAngles = eulerAngles;
+        }
+        #endregion // Set Angle
     }
 }
