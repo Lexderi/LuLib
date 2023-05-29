@@ -27,6 +27,9 @@ namespace LuLib.Vector
             float y = v.x * s + v.y * c;
             v.Set(x, y);
         }
+        /// <param name="v">vector</param>
+        /// <returns>rotation of vector relative to positive x-Axis</returns>
+        public static float GetRotation(this Vector2 v) => Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg - 90;
         #endregion // Rotate
 
         #region Clamp
