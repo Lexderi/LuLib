@@ -170,10 +170,7 @@ namespace LuLib.Vector
         {
             // init variables
             float s, c; // sin and cos
-            float vX = v.x; // x component
-            float vY = v.y; // y component
-            float vZ = v.z; // z component
-
+            Vector3 newV = v;
 
             // rotate by z
             if (z != 0)
@@ -184,13 +181,13 @@ namespace LuLib.Vector
 
                 // rotation matrix (https://en.wikipedia.org/wiki/Rotation_matrix#In_three_dimensions)
                 // ReSharper disable InconsistentNaming
-                float newVX = vX * c - vY * s;
-                float newVY = vX * s + vY * c;
+                newV.x = v.x * c - v.y * s;
+                newV.y = v.x * s + v.y * c;
                 // ReSharper restore InconsistentNaming
 
                 // update values
-                vX = newVX;
-                vY = newVY;
+                v.x = newV.x;
+                v.y = newV.y;
             }
             // rotate by x
             if (x != 0)
@@ -201,13 +198,13 @@ namespace LuLib.Vector
 
                 // rotation matrix (https://en.wikipedia.org/wiki/Rotation_matrix#In_three_dimensions)
                 // ReSharper disable InconsistentNaming
-                float newVY = vY * c - vZ * s;
-                float newVZ = vY * s + vZ * c;
+                newV.y = v.y * c - v.z * s;
+                newV.z = v.y * s + v.z * c;
                 // ReSharper restore InconsistentNaming
 
                 // update values
-                vY = newVY;
-                vZ = newVZ;
+                v.y = newV.y;
+                v.z = newV.z;
             }
             // rotate by y
             if (y != 0)
@@ -218,16 +215,23 @@ namespace LuLib.Vector
 
                 // rotation matrix (https://en.wikipedia.org/wiki/Rotation_matrix#In_three_dimensions)
                 // ReSharper disable InconsistentNaming
-                float newVX = vX * c + vZ * s;
-                float newVZ = vX * -s + vZ * c;
+                newV.x = v.x * c + v.z * s;
+                newV.z = v.x * -s + v.z * c;
                 // ReSharper restore InconsistentNaming
 
                 // update values
-                vX = newVX;
-                vZ = newVZ;
+                v.x = newV.x;
+                v.z = newV.z;
             }
-
-            v.Set(vX, vY, vZ);
+        }
+        /// <summary>
+        /// Rotates the vector in the order: z => x => y
+        /// </summary>
+        /// <param name="v">vector</param>
+        /// <param name="rotation">rotation in euler degrees</param>
+        public static void Rotate(this ref v, Vector3 rotation) 
+        {
+            v.Rotate(rotation.x, rotation.y, rotation.z);
         }
         #endregion // Rotate
 
