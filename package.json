@@ -1,6 +1,6 @@
 {
 	"name": "com.lexderi.lulib",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"displayName": "LuLib",
 	"description": "Utility library for Unity",
 	"unity": "2021.3",
