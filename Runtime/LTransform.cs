@@ -82,7 +82,7 @@ namespace LuLib.Transform
         /// destroys all children of transform
         /// </summary>
         /// <param name="t">transform</param>
-        public static void DestroyChildren(this Transform t)
+        public static void DestroyChildren(this UnityEngine.Transform t)
         {
             foreach (Transform child in t)
             {
