@@ -84,7 +84,7 @@ namespace LuLib.Transform
         /// <param name="t">transform</param>
         public static void DestroyChildren(this UnityEngine.Transform t)
         {
-            foreach (Transform child in t)
+            foreach (UnityEngine.Transform child in t)
             {
                 UnityEngine.GameObject.Destroy(child);
             }
