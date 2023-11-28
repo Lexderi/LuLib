@@ -77,5 +77,17 @@ namespace LuLib.Transform
             t.eulerAngles = eulerAngles;
         }
         #endregion // Set Angle
+
+        /// <summary>
+        /// destroys all children of transform
+        /// </summary>
+        /// <param name="t">transform</param>
+        public static void DestroyChildren(this Transform t)
+        {
+            foreach (Transform child in t)
+            {
+                GameObject.Destroy(child);
+            }
+        }
     }
 }
