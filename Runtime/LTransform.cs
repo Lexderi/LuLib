@@ -86,7 +86,7 @@ namespace LuLib.Transform
         {
             foreach (Transform child in t)
             {
-                GameObject.Destroy(child);
+                UnityEngine.GameObject.Destroy(child);
             }
         }
     }
