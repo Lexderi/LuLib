@@ -206,12 +206,12 @@ namespace LuLib.Vector
                 // rotation matrix (https://en.wikipedia.org/wiki/Rotation_matrix#In_three_dimensions)
                 // ReSharper disable InconsistentNaming
                 newV.x = v.x * c - v.y * s;
-                newv.y = v.x * s + v.y * c;
+                newV.y = v.x * s + v.y * c;
                 // ReSharper restore InconsistentNaming
 
                 // update values
                 v.x = newV.x;
-                v.y = newv.y;
+                v.y = newV.y;
             }
             // rotate by x
             if (x != 0)
@@ -222,12 +222,12 @@ namespace LuLib.Vector
 
                 // rotation matrix (https://en.wikipedia.org/wiki/Rotation_matrix#In_three_dimensions)
                 // ReSharper disable InconsistentNaming
-                newv.y = v.y * c - v.z * s;
+                newV.y = v.y * c - v.z * s;
                 newv.z = v.y * s + v.z * c;
                 // ReSharper restore InconsistentNaming
 
                 // update values
-                v.y = newv.y;
+                v.y = newV.y;
                 v.z = newv.z;
             }
             // rotate by y
