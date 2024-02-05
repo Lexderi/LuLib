@@ -359,7 +359,7 @@ namespace LuLib.Vector
         public static Vector3 GetZXZ(this Vector3 v) => new (v.z, v.x, v.z);
         public static Vector3 GetZYX(this Vector3 v) => new (v.z, v.y, v.x);
         public static Vector3 GetZYY(this Vector3 v) => new (v.z, v.y, v.y);
-        public static Vector3 GetZYZ(this Vector3 v) => new (v.z, v.y, v.Z);
+        public static Vector3 GetZYZ(this Vector3 v) => new (v.z, v.y, v.z);
         public static Vector3 GetZZX(this Vector3 v) => new (v.z, v.z, v.x);
         public static Vector3 GetZZY(this Vector3 v) => new (v.z, v.z, v.y);
         public static Vector3 GetZZZ(this Vector3 v) => new (v.z, v.z, v.z);
