@@ -128,6 +128,27 @@ namespace LuLib.Vector
             new(Random.Range(min.x, max.x), Random.Range(min.y, max.y));
         #endregion // Random
 
+        #region Get
+
+        public static Vector2 GetXX(this Vector2 v) => return new (v.x, v.x);
+        public static Vector2 GetYX(this Vector2 v) => return new (v.y, v.x);
+        public static Vector2 GetYY(this Vector2 v) => return new (v.y, v.y);
+            
+        public static Vector3 GetXXX(this Vector2 v) => return new (v.x, v.x, v.x);
+        public static Vector3 GetXXY(this Vector2 v) => return new (v.x, v.x, v.y);
+        public static Vector3 GetXYX(this Vector2 v) => return new (v.x, v.y, v.x);
+        public static Vector3 GetXYY(this Vector2 v) => return new (v.x, v.y, v.y);
+        public static Vector3 GetX0X(this Vector2 v) => return new (v.x, 0, v.x);
+        public static Vector3 GetX0Y(this Vector2 v) => return new (v.x, 0, v.y);
+        public static Vector3 GetYXX(this Vector2 v) => return new (v.y, v.x, v.x);
+        public static Vector3 GetYXY(this Vector2 v) => return new (v.y, v.x, v.y);
+        public static Vector3 GetYYX(this Vector2 v) => return new (v.y, v.y, v.x);
+        public static Vector3 GetYYY(this Vector2 v) => return new (v.y, v.y, v.y);
+        public static Vector3 GetY0X(this Vector2 v) => return new (v.y, 0, v.x);
+        public static Vector3 GetY0Y(this Vector2 v) => return new (v.y, 0, v.y);
+        
+        #endregion
+
         #endregion // Vector2
 
         #region Vector3
@@ -304,6 +325,45 @@ namespace LuLib.Vector
         public static Vector3 RandomVector3(Vector3 min, Vector3 max) =>
             new(Random.Range(min.x, max.x), Random.Range(min.y, max.y), Random.Range(min.z, max.z));
         #endregion //  Random
+
+        #region Get
+        public static Vector2 GetXX(this Vector3 v) => return new (v.x, v.x);
+        public static Vector2 GetXY(this Vector3 v) => return new (v.x, v.y);
+        public static Vector2 GetXZ(this Vector3 v) => return new (v.x, v.z);
+        public static Vector2 GetYX(this Vector3 v) => return new (v.y, v.x);
+        public static Vector2 GetYY(this Vector3 v) => return new (v.y, v.y);
+        public static Vector2 GetYZ(this Vector3 v) => return new (v.y, v.z);
+        public static Vector2 GetZX(this Vector3 v) => return new (v.z, v.x);
+        public static Vector2 GetZY(this Vector3 v) => return new (v.z, v.y);
+        public static Vector2 GetZZ(this Vector3 v) => return new (v.z, v.z);
+        
+        public static Vector3 GetXXX(this Vector3 v) => return new (v.x, v.x, v.x);
+        public static Vector3 GetXXY(this Vector3 v) => return new (v.x, v.x, v.y);
+        public static Vector3 GetXXZ(this Vector3 v) => return new (v.x, v.x, v.z);
+        public static Vector3 GetXYX(this Vector3 v) => return new (v.x, v.y, v.x);
+        public static Vector3 GetXYY(this Vector3 v) => return new (v.x, v.y, v.y);
+        public static Vector3 GetXZX(this Vector3 v) => return new (v.x, v.z, v.x);
+        public static Vector3 GetXZY(this Vector3 v) => return new (v.x, v.z, v.y);
+        public static Vector3 GetXZZ(this Vector3 v) => return new (v.x, v.z, v.z);
+        public static Vector3 GetYXX(this Vector3 v) => return new (v.y, v.x, v.x);
+        public static Vector3 GetYXY(this Vector3 v) => return new (v.y, v.x, v.y);
+        public static Vector3 GetYXZ(this Vector3 v) => return new (v.y, v.x, v.z);
+        public static Vector3 GetYYX(this Vector3 v) => return new (v.y, v.y, v.x);
+        public static Vector3 GetYYY(this Vector3 v) => return new (v.y, v.y, v.y);
+        public static Vector3 GetYYZ(this Vector3 v) => return new (v.y, v.y, v.z);
+        public static Vector3 GetYZX(this Vector3 v) => return new (v.y, v.z, v.x);
+        public static Vector3 GetYZY(this Vector3 v) => return new (v.y, v.z, v.y);
+        public static Vector3 GetYZZ(this Vector3 v) => return new (v.y, v.z, v.z);
+        public static Vector3 GetZXX(this Vector3 v) => return new (v.z, v.x, v.x);
+        public static Vector3 GetZXY(this Vector3 v) => return new (v.z, v.x, v.y);
+        public static Vector3 GetZXZ(this Vector3 v) => return new (v.z, v.x, v.z);
+        public static Vector3 GetZYX(this Vector3 v) => return new (v.z, v.y, v.x);
+        public static Vector3 GetZYY(this Vector3 v) => return new (v.z, v.y, v.y);
+        public static Vector3 GetZYZ(this Vector3 v) => return new (v.z, v.y, v.Z);
+        public static Vector3 GetZZX(this Vector3 v) => return new (v.z, v.z, v.x);
+        public static Vector3 GetZZY(this Vector3 v) => return new (v.z, v.z, v.y);
+        public static Vector3 GetZZZ(this Vector3 v) => return new (v.z, v.z, v.z);
+        #endregion
 
         #endregion // Vector3
     }
