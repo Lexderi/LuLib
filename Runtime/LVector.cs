@@ -206,12 +206,12 @@ namespace LuLib.Vector
                 // rotation matrix (https://en.wikipedia.org/wiki/Rotation_matrix#In_three_dimensions)
                 // ReSharper disable InconsistentNaming
                 newV.x = v.x * c - v.y * s;
-                newV.y = v.x * s + v.y * c;
+                newv.y = v.x * s + v.y * c;
                 // ReSharper restore InconsistentNaming
 
                 // update values
                 v.x = newV.x;
-                v.y = newV.y;
+                v.y = newv.y;
             }
             // rotate by x
             if (x != 0)
@@ -222,13 +222,13 @@ namespace LuLib.Vector
 
                 // rotation matrix (https://en.wikipedia.org/wiki/Rotation_matrix#In_three_dimensions)
                 // ReSharper disable InconsistentNaming
-                newV.y = v.y * c - v.z * s;
-                newV.z = v.y * s + v.z * c;
+                newv.y = v.y * c - v.z * s;
+                newv.z = v.y * s + v.z * c;
                 // ReSharper restore InconsistentNaming
 
                 // update values
-                v.y = newV.y;
-                v.z = newV.z;
+                v.y = newv.y;
+                v.z = newv.z;
             }
             // rotate by y
             if (y != 0)
@@ -240,12 +240,12 @@ namespace LuLib.Vector
                 // rotation matrix (https://en.wikipedia.org/wiki/Rotation_matrix#In_three_dimensions)
                 // ReSharper disable InconsistentNaming
                 newV.x = v.x * c + v.z * s;
-                newV.z = v.x * -s + v.z * c;
+                newv.z = v.x * -s + v.z * c;
                 // ReSharper restore InconsistentNaming
 
                 // update values
                 v.x = newV.x;
-                v.z = newV.z;
+                v.z = newv.z;
             }
         }
         /// <summary>
@@ -359,7 +359,7 @@ namespace LuLib.Vector
         public static Vector3 GetZXZ(this Vector3 v) => new (v.z, v.x, v.z);
         public static Vector3 GetZYX(this Vector3 v) => new (v.z, v.y, v.x);
         public static Vector3 GetZYY(this Vector3 v) => new (v.z, v.y, v.y);
-        public static Vector3 GetZYZ(this Vector3 v) => new (v.z, v.y, v.Z);
+        public static Vector3 GetZYZ(this Vector3 v) => new (v.z, v.y, v.z);
         public static Vector3 GetZZX(this Vector3 v) => new (v.z, v.z, v.x);
         public static Vector3 GetZZY(this Vector3 v) => new (v.z, v.z, v.y);
         public static Vector3 GetZZZ(this Vector3 v) => new (v.z, v.z, v.z);
